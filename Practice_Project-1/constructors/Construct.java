@@ -1,6 +1,6 @@
 package constructors;
 
-//  Three types of constructors in java
+//  Two types of constructors in java
 // 1. Default constructor
 // 2.Parameterized constructor
 
