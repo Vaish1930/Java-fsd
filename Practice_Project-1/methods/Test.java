@@ -12,3 +12,7 @@ public class Test {
         display();
     }
 }
+
+// There are two ways to call a function in java
+// 1. Call by Value
+// 2. Call by reference
