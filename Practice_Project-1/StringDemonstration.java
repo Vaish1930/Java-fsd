@@ -24,7 +24,7 @@ public class StringDemonstration {
         s2.append(" morning!");
         System.out.println("String Builder : " + s2.toString());
         int capacity = s2.capacity();
-        System.out.println("Caapacity of String Builder : " + capacity);
+        System.out.println("Capacity of String Builder : " + capacity);
 
         // String to string Buffer
         System.out.println("\nString to String Buffer ");
@@ -36,7 +36,9 @@ public class StringDemonstration {
         System.out.println("\nString to String Builder ");
         StringBuilder s4 = new StringBuilder(s);
         s4.append(" (Builder)");
+        int capacity1 = s4.capacity();
         System.out.println("\nString after converting to String Builder : " + s4);
+        System.out.println("Capacity of String Builder : " + capacity1);
 
     }
 }
