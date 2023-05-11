@@ -1,4 +1,6 @@
 
+// Implementing Synchronization
+
 public class Factor {
     void printFactorial(int n) {
 
