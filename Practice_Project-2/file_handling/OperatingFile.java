@@ -15,7 +15,7 @@ public class OperatingFile {
             fileWriter.close();
 
         } catch (Exception e) {
-
+            System.out.println("Somethin went wrong " + e.getMessage());
         }
 
     }
@@ -34,6 +34,7 @@ public class OperatingFile {
             sc.close();
             return fileData;
         } catch (Exception e) {
+            System.out.println("Somethin went wrong " + e.getMessage());
             return "";
 
         }
@@ -41,17 +42,26 @@ public class OperatingFile {
     }
 
     void delete(String fileName) {
-        if (new File(fileName).delete()) {
-            System.out.println("File Deleted!");
+        try {
+            if (new File(fileName).delete()) {
+                System.out.println("File Deleted!");
 
-        } else {
-            System.out.println("Error in deleting File");
+            } else {
+                System.out.println("Error in deleting File");
+            }
+        } catch (Exception e) {
+            System.out.println("Somethin went wrong " + e.getMessage());
         }
+
     }
 
     void update(String fileName, OperatingFile operatingFile, String data) {
-        String previousData = operatingFile.read(fileName);
-        operatingFile.createFile(fileName, previousData + "\n" + data);
+        try {
+            String previousData = operatingFile.read(fileName);
+            operatingFile.createFile(fileName, previousData + "\n" + data);
+        } catch (Exception e) {
+            System.out.println("Somethin went wrong " + e.getMessage());
+        }
 
     }
 
