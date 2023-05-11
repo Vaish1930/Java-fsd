@@ -11,11 +11,11 @@ public class OperatingFile {
         try {
             FileWriter fileWriter = new FileWriter(fileName);
             fileWriter.write(data);
-            // System.out.println(obj.getName() + " created");
+            System.out.println("\nFile created");
             fileWriter.close();
 
         } catch (Exception e) {
-            System.out.println("Somethin went wrong " + e.getMessage());
+            System.out.println("\nSomethin went wrong " + e.getMessage());
         }
 
     }
@@ -28,7 +28,7 @@ public class OperatingFile {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String data = sc.nextLine();
-                System.out.println(data);
+                System.out.println("Reading: " + data);
                 fileData += data;
             }
             sc.close();
@@ -59,6 +59,7 @@ public class OperatingFile {
         try {
             String previousData = operatingFile.read(fileName);
             operatingFile.createFile(fileName, previousData + "\n" + data);
+            System.out.println("File Updated");
         } catch (Exception e) {
             System.out.println("Somethin went wrong " + e.getMessage());
         }
