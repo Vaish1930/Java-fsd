@@ -1,34 +1,39 @@
+import java.util.Scanner;
+
 public class RotateRight {
 
     public static void main(String[] args) {
-        int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
-        int n = 3;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input size of array");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        System.out.println("Input numbers in Array");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
 
         System.out.println("Original array: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int l = 0; l < arr.length; l++) {
+            System.out.print(arr[l] + " ");
         }
-        int k = 1;
-        while (k <= 5) {
 
-            for (int i = 0; i < n; i++) {
-                int j, last;
-                last = arr[arr.length - 1];
+        for (int l = 0; l < 5; l++) {
+            int j, last;
+            last = arr[arr.length - 1];
 
-                for (j = arr.length - 1; j > 0; j--) {
-                    arr[j] = arr[j - 1];
-                }
-                arr[0] = last;
+            for (j = arr.length - 1; j > 0; j--) {
+                arr[j] = arr[j - 1];
             }
-            k++;
+            arr[0] = last;
         }
 
         System.out.println();
 
-        System.out.println("Array after 5 right rotation: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        System.out.println("Array after right rotation: ");
+        for (int l = 0; l < arr.length; l++) {
+            System.out.print(arr[l] + " ");
         }
+        sc.close();
     }
 
 }
