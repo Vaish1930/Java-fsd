@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Queue Implemetation
 public class Queue {
 
     int size = 5;
