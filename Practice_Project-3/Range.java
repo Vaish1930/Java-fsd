@@ -1,18 +1,23 @@
+import java.util.Scanner;
+
 public class Range {
 
-    static int sumNatural(int n) {
+    static int sum(int n) {
         int sum = (n * (n + 1)) / 2;
         return sum;
     }
 
-    static int suminRange(int l, int r) {
-        return sumNatural(r) - sumNatural(l - 1);
+    static int sumInRange(int l, int r) {
+        return sum(r) - sum(l - 1);
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input range");
+        int l = sc.nextInt();
+        int r = sc.nextInt();
 
-        int l = 2, r = 5;
-        System.out.println("Sum of Natural numbers from L to R is " + suminRange(l, r));
-
+        System.out.println("Sum of Natural numbers from L to R is " + sumInRange(l, r));
+        sc.close();
     }
 }
