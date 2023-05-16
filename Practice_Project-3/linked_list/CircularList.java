@@ -27,31 +27,23 @@ public class CircularList {
         this.data = data;
     }
 
-    public void push(CircularList newNode) {
-        newNode.setNext(this);
+    public CircularList push(CircularList newNode) {
         CircularList head = this;
-
-        while (head.next != this) {
-            head = head.next;
-        }
-        head.setNext(newNode);
-    }
-
-    public int delete(int dataDelete) {
-
-        CircularList head = this, previosusNode = null;
-
-        while (head.data != dataDelete) {
-            previosusNode = head;
-            head = head.next;
-        }
-        if (previosusNode == null) {
-            head = head.next;
+        if (head.data > newNode.data) {
+            while (head.next != this) {
+                head = head.next;
+            }
+            newNode.setNext(this);
+            head.setNext(newNode);
+            return newNode;
         } else {
-
-            previosusNode.next = head.next;
+            while (newNode.data > head.next.data && head.next != this) {
+                head = head.next;
+            }
+            newNode.setNext(head.getNext());
+            head.setNext(newNode);
+            return this;
         }
-        return dataDelete;
     }
 
     public void display() {
@@ -77,20 +69,16 @@ public class CircularList {
 
             if (circularList == null) {
                 circularList = node;
-                circularList.setNext(circularList);
+                circularList.setNext(node);
             } else {
 
-                circularList.push(node);
+                circularList = circularList.push(node);
+
             }
 
         }
         circularList.display();
 
-        System.out.println("\nEnter data you want to delete");
-        int deleteData = sc.nextInt();
-
-        circularList.delete(deleteData);
-        circularList.display();
         sc.close();
     }
 }
