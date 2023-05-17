@@ -5,6 +5,23 @@ import java.util.Scanner;
 public class BinarySearch {
 
     public static void binarySearch(int ar[], int num, int start, int end) {
+        int mid;
+        while (start <= end) {
+            mid = (start + end) / 2;
+            if (ar[mid] == num) {
+                System.out.println("Element found at index " + mid);
+
+                break;
+            }
+
+            else if (ar[mid] < num) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        if (start > end)
+            System.out.println("Number not found");
 
     }
 
