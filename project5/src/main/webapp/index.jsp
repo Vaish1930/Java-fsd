@@ -1,4 +1,12 @@
 <html>
+  <head>
+    <title>Servlet</title>
+    <style>
+      body {
+        background: grey;
+      }
+    </style>
+  </head>
   <body>
     <h2>Hello World!</h2>
     <a href="/project5/test">Go to Test</a>

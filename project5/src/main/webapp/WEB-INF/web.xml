@@ -40,4 +40,14 @@
 		<servlet-name>InterfaceTest</servlet-name>
 		<url-pattern>/interface-test</url-pattern>
 	</servlet-mapping>
+
+	 <filter>
+      <filter-name>FilterTest</filter-name>
+      <filter-class>com.example.phase2.FilterTest</filter-class>
+  </filter>
+   
+  <filter-mapping>
+      <filter-name>FilterTest</filter-name>
+      <url-pattern>/test</url-pattern>
+  </filter-mapping>
 </web-app>
