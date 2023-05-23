@@ -28,4 +28,16 @@
 		<servlet-name>GenericTest</servlet-name>
 		<url-pattern>/generic-test</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>InterfaceTest</servlet-name>
+		<servlet-class>
+		  com.example.phase2.InterfaceTest
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>InterfaceTest</servlet-name>
+		<url-pattern>/interface-test</url-pattern>
+	</servlet-mapping>
 </web-app>

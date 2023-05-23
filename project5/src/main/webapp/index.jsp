@@ -7,5 +7,6 @@
       <button type="submit">Save</button>
     </form>
     <a href="/project5/generic-test">Go to Generic servlet</a>
+    <a href="/project5/interface-test">Go to Interface servlet</a>
   </body>
 </html>
