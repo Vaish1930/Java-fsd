@@ -20,7 +20,7 @@ public class CookiesTracking extends HttpServlet {
         Date lastAccessTime = new Date(session.getLastAccessedTime());
 
         String title = "Welcome Back to Session";
-        int visitCount = new Integer(0);
+        int visitCount = 0;
         String visitCountKey = new String("visitCount");
         String userIDKey = new String("userID");
         String userID = new String("Vaishnavi");
