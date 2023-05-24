@@ -98,4 +98,16 @@
 		<servlet-name>Dashboard</servlet-name>
 		<url-pattern>/dashboard</url-pattern>
 	</servlet-mapping>
+
+  <servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>
+		  com.example.phase2.Logout
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
 </web-app>

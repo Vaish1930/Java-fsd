@@ -22,7 +22,7 @@ public class HiddenTest extends HttpServlet {
 
         Cookie cookie = new Cookie("username", username);
         resp.addCookie(cookie);
-        out.print("<br><a href=\"/project5/dashboard\"><button type=\"button\">Show Cookies</button></a>");
+        out.print("<br><a href=\"/project5/dashboard\"><button type=\"button\">Login</button></a>");
         out.print("WELCOME " + username);
 
         out.close();
