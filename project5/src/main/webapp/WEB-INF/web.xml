@@ -50,4 +50,16 @@
       <filter-name>FilterTest</filter-name>
       <url-pattern>/test</url-pattern>
   </filter-mapping>
+
+  <servlet>
+		<servlet-name>CookiesTracking</servlet-name>
+		<servlet-class>
+		  com.example.phase2.CookiesTracking
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>CookiesTracking</servlet-name>
+		<url-pattern>/cookies-tracking</url-pattern>
+	</servlet-mapping>
 </web-app>
