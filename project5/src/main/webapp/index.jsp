@@ -20,6 +20,6 @@
     <br />
     <a href="/project5/interface-test">Go to Interface servlet</a>
     <br />
-    <a href="/project5/cookies-tracking">Go to cookies-tracking</a>
+    <a href="/project5/session-tracking">Go to session-tracking</a>
   </body>
 </html>

@@ -52,15 +52,15 @@
   </filter-mapping>
 
   <servlet>
-		<servlet-name>CookiesTracking</servlet-name>
+		<servlet-name>SessionTracking</servlet-name>
 		<servlet-class>
-		  com.example.phase2.CookiesTracking
+		  com.example.phase2.SessionTracking
 		</servlet-class>
 	</servlet>
  
 	<servlet-mapping>
-		<servlet-name>CookiesTracking</servlet-name>
-		<url-pattern>/cookies-tracking</url-pattern>
+		<servlet-name>SessionTracking</servlet-name>
+		<url-pattern>/session-tracking</url-pattern>
 	</servlet-mapping>
 
   <servlet>
