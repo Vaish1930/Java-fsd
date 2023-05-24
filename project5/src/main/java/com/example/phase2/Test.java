@@ -27,6 +27,7 @@ public class Test extends HttpServlet {
         String name = req.getParameter("fullName");
         PrintWriter wr = resp.getWriter();
         wr.println("<h1>Post Request " + name + "</h1>");
+        wr.println("<a href='/project5/profile?userName=" + name + "'>visit</a>");
         wr.close();
     }
 }
