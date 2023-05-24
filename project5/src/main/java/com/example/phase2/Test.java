@@ -28,6 +28,13 @@ public class Test extends HttpServlet {
         PrintWriter wr = resp.getWriter();
         wr.println("<h1>Post Request " + name + "</h1>");
         wr.println("<a href='/project5/profile?userName=" + name + "'>visit</a>");
+
+        wr.print("<form action='/project5/hidden'>");
+        wr.println("<br/>");
+        wr.print("<input type='hidden' name='username' value='" + name + "'>");
+        wr.print("<input type='submit' value='submit'>");
+        wr.print("</form>");
+        wr.close();
         wr.close();
     }
 }

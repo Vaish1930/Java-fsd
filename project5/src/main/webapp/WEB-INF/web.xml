@@ -74,4 +74,16 @@
 		<servlet-name>ProfileServlet</servlet-name>
 		<url-pattern>/profile</url-pattern>
 	</servlet-mapping>
+
+  <servlet>
+		<servlet-name>HiddenTest</servlet-name>
+		<servlet-class>
+		  com.example.phase2.HiddenTest
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>HiddenTest</servlet-name>
+		<url-pattern>/hidden</url-pattern>
+	</servlet-mapping>
 </web-app>
