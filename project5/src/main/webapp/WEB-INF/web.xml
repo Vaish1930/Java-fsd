@@ -86,4 +86,16 @@
 		<servlet-name>HiddenTest</servlet-name>
 		<url-pattern>/hidden</url-pattern>
 	</servlet-mapping>
+
+  <servlet>
+		<servlet-name>Dashboard</servlet-name>
+		<servlet-class>
+		  com.example.phase2.Dashboard
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Dashboard</servlet-name>
+		<url-pattern>/dashboard</url-pattern>
+	</servlet-mapping>
 </web-app>

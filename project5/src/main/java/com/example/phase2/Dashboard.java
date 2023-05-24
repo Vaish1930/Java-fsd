@@ -9,21 +9,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class HiddenTest extends HttpServlet {
+public class Dashboard extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         resp.setContentType("text/html");
-
         PrintWriter out = resp.getWriter();
 
-        String username = req.getParameter("username");
+        Cookie ck[] = req.getCookies();
+        for (Cookie cookie : ck) {
 
-        Cookie cookie = new Cookie("username", username);
-        resp.addCookie(cookie);
-        out.print("<br><a href=\"/project5/dashboard\"><button type=\"button\">Show Cookies</button></a>");
-        out.print("WELCOME " + username);
+            out.print("<br>" + cookie.getName() + " " + cookie.getValue());
+        }
 
         out.close();
     }
