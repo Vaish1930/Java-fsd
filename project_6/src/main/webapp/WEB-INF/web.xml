@@ -15,6 +15,17 @@
 		<servlet-name>DemoJdbc</servlet-name>
 		<url-pattern>/init</url-pattern>
 	</servlet-mapping>
+<servlet>
+		<servlet-name>Statements</servlet-name>
+		<servlet-class>
+		  com.example.project_jdbc.Statements
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Statements</servlet-name>
+		<url-pattern>/statement</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>
