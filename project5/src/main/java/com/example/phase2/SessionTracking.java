@@ -23,7 +23,7 @@ public class SessionTracking extends HttpServlet {
         int visitCount = 0;
         String visitCountKey = new String("visitCount");
         String userIDKey = new String("userID");
-        String userID = new String("Vaishnavi");
+        String userID = new String("new");
 
         if (session.isNew()) {
             title = "Welcome to Session";
