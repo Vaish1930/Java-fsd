@@ -4,7 +4,7 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-<servlet>
+   <servlet>
 		<servlet-name>DemoJdbc</servlet-name>
 		<servlet-class>
 		  com.example.project_jdbc.DemoJdbc
@@ -15,7 +15,10 @@
 		<servlet-name>DemoJdbc</servlet-name>
 		<url-pattern>/init</url-pattern>
 	</servlet-mapping>
-<servlet>
+
+
+      
+	 <servlet>
 		<servlet-name>Statements</servlet-name>
 		<servlet-class>
 		  com.example.project_jdbc.Statements
@@ -25,6 +28,18 @@
 	<servlet-mapping>
 		<servlet-name>Statements</servlet-name>
 		<url-pattern>/statement</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProductDetails</servlet-name>
+		<servlet-class>
+		  com.example.project_jdbc.ProductDetails
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>ProductDetails</servlet-name>
+		<url-pattern>/stored-procedure</url-pattern>
 	</servlet-mapping>
 
 
