@@ -22,4 +22,5 @@ public class DbConnection {
             this.connection.close();
         }
     }
+
 }

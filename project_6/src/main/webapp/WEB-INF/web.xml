@@ -55,5 +55,17 @@
 		<url-pattern>/operation</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>Product</servlet-name>
+		<servlet-class>
+		  com.example.project_jdbc.Product
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Product</servlet-name>
+		<url-pattern>/product-details</url-pattern>
+	</servlet-mapping>
+
 
 </web-app>
