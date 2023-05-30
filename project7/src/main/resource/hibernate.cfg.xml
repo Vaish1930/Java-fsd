@@ -1,13 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
-		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-		"https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-       
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ecommerce</property>
-       
+   <session-factory>
+   
+      <property name = "hibernate.dialect">
+         org.hibernate.dialect.MySQLDialect
+      </property>
+      
+      <property name = "hibernate.connection.driver_class">
+       com.mysql.cj.jdbc.Driver
+      </property>
+      
+      <!-- Assume test is the database name -->
+      
+      <property name = "hibernate.connection.url">
+        jdbc:mysql://localhost:3306/ecommerce
+      </property>
       
       <property name = "hibernate.connection.username">
          root
@@ -16,8 +25,9 @@
       <property name = "hibernate.connection.password">
          Vaishnavi@30
       </property>
-       
-        <!-- Mapping with model class containing annotations -->
-	<mapping class="com.example.Eproduct"/>
-    </session-factory>
+      
+      <!-- List of XML mapping files -->
+      <mapping resource = "Eproduct.hbm.xml"/>
+      
+   </session-factory>
 </hibernate-configuration>
