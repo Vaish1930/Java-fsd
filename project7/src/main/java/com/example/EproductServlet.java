@@ -25,8 +25,9 @@ public class EproductServlet extends HttpServlet {
 
             Transaction transaction = session.beginTransaction();
 
-            List<Eproduct> products = session.createQuery("from eproduct", Eproduct.class).list();
+            List<Eproduct> products = session.createQuery("from Eproduct", Eproduct.class).list();
 
+            session.close();
             transaction.commit();
 
             printWriter.println("<html>");
@@ -36,13 +37,12 @@ public class EproductServlet extends HttpServlet {
             printWriter.println("<b>Product Listing </b><br>");
 
             for (Eproduct product : products) {
-                printWriter.println("Id: " + product.getId());
+                printWriter.println("Id: " + String.valueOf(product.getId()));
                 printWriter.println("Name: " + product.getName());
-                printWriter.println("Price: " + product.getPrice());
-                printWriter.println("Date Added: " + product.getDate_added());
+                printWriter.println("Price: " + String.valueOf(product.getPrice()));
+                printWriter.println("Date Added: " + product.getDate_added().toString());
             }
 
-            session.close();
             printWriter.println("</body></html>");
             printWriter.close();
 
