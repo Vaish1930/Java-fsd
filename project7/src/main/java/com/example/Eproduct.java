@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -23,15 +22,12 @@ public class Eproduct {
     BigDecimal price;
     Date date_added;
     List<Color> colors;
-    Map finance;
+    Set<Finance> finance;
     Set<OS> os;
     Collection<ScreenSizes> screenSizes;
 
-    public Eproduct() {
-    }
-
-    public Eproduct(int id, String name, BigDecimal price, Date date_added, List<Color> colors, Map finance, Set<OS> os,
-            Collection<ScreenSizes> screenSizes) {
+    public Eproduct(int id, String name, BigDecimal price, Date date_added, List<Color> colors, Set<Finance> finance,
+            Set<OS> os, Collection<ScreenSizes> screenSizes) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -40,6 +36,9 @@ public class Eproduct {
         this.finance = finance;
         this.os = os;
         this.screenSizes = screenSizes;
+    }
+
+    public Eproduct() {
     }
 
     public int getId() {
@@ -82,11 +81,11 @@ public class Eproduct {
         this.colors = colors;
     }
 
-    public Map getFinance() {
+    public Set<Finance> getFinance() {
         return finance;
     }
 
-    public void setFinance(Map finance) {
+    public void setFinance(Set<Finance> finance) {
         this.finance = finance;
     }
 

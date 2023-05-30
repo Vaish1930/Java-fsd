@@ -29,4 +29,29 @@
 		<url-pattern>/init</url-pattern>
 	</servlet-mapping>
 
+  <servlet>
+		<servlet-name>ProductDetails</servlet-name>
+		<servlet-class>
+		  com.example.ProductDetails
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>ProductDetails</servlet-name>
+		<url-pattern>/product-detail</url-pattern>
+	</servlet-mapping>
+
+
+  <servlet>
+		<servlet-name>Product</servlet-name>
+		<servlet-class>
+		  com.example.Product
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>Product</servlet-name>
+		<url-pattern>/product</url-pattern>
+	</servlet-mapping>
+
 </web-app>
