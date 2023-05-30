@@ -41,6 +41,18 @@
 		<url-pattern>/product-detail</url-pattern>
 	</servlet-mapping>
 
+  <servlet>
+		<servlet-name>ProductDetails1</servlet-name>
+		<servlet-class>
+		  com.example.ProductDetails1
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>ProductDetails1</servlet-name>
+		<url-pattern>/product-detail1</url-pattern>
+	</servlet-mapping>
+
 
   <servlet>
 		<servlet-name>Product</servlet-name>
