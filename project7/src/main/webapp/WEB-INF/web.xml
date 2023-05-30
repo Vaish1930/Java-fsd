@@ -17,4 +17,16 @@
 		<url-pattern>/eproduct</url-pattern>
 	</servlet-mapping>
 
+  <servlet>
+		<servlet-name>HibernateInit</servlet-name>
+		<servlet-class>
+		  com.example.HibernateInit
+		</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>HibernateInit</servlet-name>
+		<url-pattern>/init</url-pattern>
+	</servlet-mapping>
+
 </web-app>
