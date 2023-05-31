@@ -1,3 +1,4 @@
+<jsp:useBean id="obj" class="com.example.Calculator" />
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,15 +8,6 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="implicit.jsp">
-      <input type="text" name="uname" />
-      <input type="submit" value="submit" /><br />
-    </form>
-</br>
-</br>
-<a href="directive.jsp">Open Directive</a>
-</br>
-</br>
-    <a href="action.jsp">Action Tag</a>
+    <% int m=obj.cube(5); out.print("cube of 5 is "+m); %>
   </body>
 </html>

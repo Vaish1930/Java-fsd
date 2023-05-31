@@ -7,15 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="implicit.jsp">
-      <input type="text" name="uname" />
-      <input type="submit" value="submit" /><br />
-    </form>
-</br>
-</br>
-<a href="directive.jsp">Open Directive</a>
-</br>
-</br>
-    <a href="action.jsp">Action Tag</a>
+    <%@ include file="navbar.html" %> <%@ page import="java.util.Date" %> Today
+    is: <%= new Date() %>
   </body>
 </html>
