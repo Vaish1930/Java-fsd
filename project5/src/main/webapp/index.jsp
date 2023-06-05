@@ -12,7 +12,12 @@
     <br />
     <a href="/project5/test">Go to Test</a>
     <form action="/project5/test" method="post">
-      <input type="text" placeholder="Enter your name" name="fullName" />
+      <input
+        type="hidden"
+        placeholder="Enter your name"
+        name="fullName"
+        value="Vaishnavi"
+      />
       <button type="submit">Save</button>
     </form>
     <br />
