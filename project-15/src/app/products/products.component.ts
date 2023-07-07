@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   fname: string = 'Vaishnavi';
+  myClass = 'success';
+  color = 'red';
+
+  updateColor() {
+    this.color = 'blue';
+  }
 }

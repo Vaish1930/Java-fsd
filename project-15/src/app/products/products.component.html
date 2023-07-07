@@ -2,3 +2,13 @@
 <h2>Given Name is : {{ fname }}</h2>
 <br />
 <input type="text" [value]="fname" />
+
+<hr />
+<h2>Class Binding</h2>
+
+<div class="myClass" [class]="myClass">Class Binding</div>
+<hr />
+<br />
+<h2>Style Binding</h2>
+<h2 [style.color]="color">{{ fname }}</h2>
+<button (click)="updateColor()">Update Color</button>
