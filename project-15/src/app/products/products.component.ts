@@ -13,4 +13,8 @@ export class ProductsComponent {
   updateColor() {
     this.color = 'blue';
   }
+
+  demofunc() {
+    this.fname = 'Alex';
+  }
 }
