@@ -16,5 +16,13 @@
 <!-- Event Binding -->
 
 <h2>Event Binding</h2>
-
 <input type="button" value="Click me" (click)="demofunc()" />
+
+<hr />
+<br />
+
+<!-- Two way Binding -->
+
+<h2>Two-Way Binding</h2>
+<input type="text" [(ngModel)]="newName" />
+<h2>Name : {{ newName }}</h2>

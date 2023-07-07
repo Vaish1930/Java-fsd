@@ -17,4 +17,6 @@ export class ProductsComponent {
   demofunc() {
     this.fname = 'Alex';
   }
+
+  newName: string = 'Claire';
 }
