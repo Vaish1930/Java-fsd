@@ -26,6 +26,9 @@ public class Test {
         Select genderInput = new Select(driver.findElement(By.id("gender")));
         genderInput.selectByVisibleText("Female");
 
+        // Handling external elements
+
+        driver.switchTo().alert().accept();
     }
 
 }
