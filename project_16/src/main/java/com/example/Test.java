@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Test {
     public static void main(String[] args) {
@@ -19,6 +20,12 @@ public class Test {
 
         // Locating Elements through XPath.
         driver.findElement(By.xpath("html/body/form"));
+
+        // Handling Various Web Elements.
+
+        Select genderInput = new Select(driver.findElement(By.id("gender")));
+        genderInput.selectByVisibleText("Female");
+
     }
 
 }
